@@ -1,0 +1,204 @@
+body {
+    background-color: black;
+    color: azure;
+    margin: 0;
+    font-family: 'Protest Strike', sans-serif;
+}
+
+.logo {
+    border-radius:8%;
+    width: 100px;
+    height: 100px;
+}
+
+.container {
+    margin: 0 0;
+}
+
+.header-line {
+    background-color: #090909;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: azure;
+    font-size: 20px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+
+.face {
+    justify-content: center;
+    display: flex;
+    padding-top: 200px;
+}
+
+.eye {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.ball {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #737d8b;
+}
+
+.spacer {
+    width: 50px;
+}
+
+#steam-underline {
+    position: relative;
+}
+
+#steam-underline::before,
+#steam-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: azure;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+#steam-underline::before {
+    left: 15px;
+}
+
+#steam-underline::after {
+    right: 19px;
+}
+
+#steam-underline:hover::before,
+#steam-underline:hover::after {
+    width: 50px;
+}
+
+#github-underline {
+    position: relative;
+}
+
+#github-underline::before,
+#github-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: azure;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+#github-underline::before {
+    left: 15px;
+}
+
+#github-underline::after {
+    right: 19px;
+}
+
+#github-underline:hover::before,
+#github-underline:hover::after {
+    width: 50px;
+}
+
+#logo-underline {
+    position: relative;
+}
+
+#logo-underline::before,
+#logo-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: azure;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+#logo-underline::before {
+    left: 15px;
+}
+
+#logo-underline::after {
+    right: 19px;
+}
+
+#logo-underline:hover::before,
+#logo-underline:hover::after {
+    width: 50px;
+}
+
+#spotify-underline {
+    position: relative;
+}
+
+#spotify-underline::before,
+#spotify-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: azure;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+#spotify-underline::before {
+    left: 15px;
+}
+
+#spotify-underline::after {
+    right: 19px;
+}
+
+#spotify-underline:hover::before,
+#spotify-underline:hover::after {
+    width: 50px;
+}
+
+#discord-underline {
+    position: relative;
+}
+
+#discord-underline::before,
+#discord-underline::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: azure;
+    width: 0;
+    transition: width 0.3s ease;
+}
+
+#discord-underline::before {
+    left: 15px;
+}
+
+#discord-underline::after {
+    right: 19px;
+}
+
+#discord-underline:hover::before,
+#discord-underline:hover::after {
+    width: 50px;
+}
+
+#nicua {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
