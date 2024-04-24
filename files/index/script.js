@@ -1,7 +1,19 @@
 const dsName = "bumer32"
 
+function showToast(message) {
+    const toast = document.createElement('div');
+    toast.classList.add('toast');
+    toast.textContent = message;
+    document.body.appendChild(toast);
+
+    setTimeout(() => {
+        document.body.removeChild(toast);
+    }, 3000);
+}
+
 function ds() {
     navigator.clipboard.writeText(dsName)
+    showToast("Copied to clipboard")
 }
 
 const eyeLeft = document.getElementById("eyeLeft")
@@ -9,18 +21,21 @@ const eyeRight = document.getElementById("eyeRight")
 const ballLeft = document.getElementById("ballLeft")
 const ballRight = document.getElementById("ballRight")
 
-const eyeLeftCoordX = eyeLeft.offsetLeft
-const eyeLeftCoordY = eyeLeft.offsetTop
-const eyeLeftCalcX = eyeLeft.getBoundingClientRect().left + 150
-const eyeLeftCalcY = eyeLeft.getBoundingClientRect().top + 150
+let eyeLeftCoordX = eyeLeft.offsetLeft
+let eyeLeftCoordY = eyeLeft.offsetTop
+let eyeLeftCalcX = eyeLeft.getBoundingClientRect().left + 150
+let eyeLeftCalcY = eyeLeft.getBoundingClientRect().top + 150
 
-const eyeRightCoordX = eyeRight.offsetLeft
-const eyeRightCoordY = eyeRight.offsetTop
-const eyeRightCalcX = eyeRight.getBoundingClientRect().left + 150
-const eyeRightCalcY = eyeRight.getBoundingClientRect().top + 150
+let eyeRightCoordX = eyeRight.offsetLeft
+let eyeRightCoordY = eyeRight.offsetTop
+let eyeRightCalcX = eyeRight.getBoundingClientRect().left + 150
+let eyeRightCalcY = eyeRight.getBoundingClientRect().top + 150
+
+let timeOutFunctionId
 
 ballLeft.style.transform = `translate(${75}px, ${75}px)`
 ballRight.style.transform = `translate(${75}px, ${75}px)`
+
 
 document.addEventListener("mousemove", (event) => {
     const mouseX = event.clientX
@@ -55,4 +70,20 @@ document.addEventListener("mousemove", (event) => {
     }
     ballRight.style.left = ballRightNewCoordX + "px"
     ballRight.style.top = ballRightNewCoordY + "px"
+})
+
+window.addEventListener("resize", (event) => {
+    clearTimeout(timeOutFunctionId)
+
+    timeOutFunctionId = window.setTimeout(() => {
+        eyeLeftCoordX = eyeLeft.offsetLeft
+        eyeLeftCoordY = eyeLeft.offsetTop
+        eyeLeftCalcX = eyeLeft.getBoundingClientRect().left + 150
+        eyeLeftCalcY = eyeLeft.getBoundingClientRect().top + 150
+
+        eyeRightCoordX = eyeRight.offsetLeft
+        eyeRightCoordY = eyeRight.offsetTop
+        eyeRightCalcX = eyeRight.getBoundingClientRect().left + 150
+        eyeRightCalcY = eyeRight.getBoundingClientRect().top + 150
+    })
 })
