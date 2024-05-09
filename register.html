@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="files/base.css">
     <link rel="stylesheet" href="files/register/style.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,54 +13,64 @@
     <link rel="icon" href="files/favicon.png">
 </head>
 <body>
-<div class="container">
-    <div class="header-line">
-        <span id="steam-underline">
-            <a class="nav-item" href="https://steamcommunity.com/id/Bumer_32_yes/">Steam</a>
-        </span>
+    <div class="container">
+        <div class="header-line">
+            <span id="aboutme-underline">
+                <a class="nav-item" href="/about-me.html">About</a>
+            </span>
 
-        <span id="github-underline">
-            <a class="nav-item" href="https://github.com/Bumer-32">Github</a>
-        </span>
+            <span id="steam-underline">
+                <a class="nav-item" href="https://steamcommunity.com/id/Bumer_32_yes/">Steam</a>
+            </span>
 
-        <span id="logo-underline">
-            <a class="nav-item" href="index.html">
-                <img src="files/favicon.png" alt="Logo" id="logo">
-            </a>
-        </span>
+            <span id="github-underline">
+                    <a class="nav-item" href="https://github.com/Bumer-32">Github</a>
+            </span>
 
-        <span id="spotify-underline">
-            <a class="nav-item" href="https://open.spotify.com/user/uqfc83jqfzvdy4nkqmx580p1m?si=c69bad30cc2643a2">Spotify</a>
-        </span>
+            <span id="logo-underline">
+                    <a class="nav-item" href="/index.html">
+                        <img src="files/favicon.png" alt="Logo" id="logo">
+                    </a>
+            </span>
 
-        <span id="discord-underline">
-            <a class="nav-item" href="#" onclick="ds()">Discord</a>
-        </span>
-    </div>
+            <span id="spotify-underline">
+                    <a class="nav-item" href="https://open.spotify.com/user/uqfc83jqfzvdy4nkqmx580p1m?si=c69bad30cc2643a2">Spotify</a>
+            </span>
 
-    <div class="footer">
-        <div id="nic-ua">
-            <a target="_blank" href="https://nic.ua/en/signup/hmrmykhz"><img alt="Powered by NIC.UA" src="https://nic.ua/assets/i/referral/btn-white-eng.png?version=v339"></a>
+            <span id="discord-underline">
+                    <a class="nav-item" href="#" onclick="ds()">Discord</a>
+            </span>
+
+            <span id="code-underline">
+                <a class="nav-item" href="/code.html">Code</a>
+            </span>
         </div>
-        <div class="footer-text">
-            <p> 2024 Bumer_32/lumivoid | <a href="https://github.com/Bumer-32/lumivoid/blob/main/LICENSE">License</a> | <a href="https://github.com/Bumer-32/lumivoid/">Project Github</a></p>
-            <p>Servers are not public. You cannot access their code! sorry ¯\_(ツ)_/¯</p>
+
+        <div class="footer">
+            <div id="nic-ua">
+                <a target="_blank" href="https://nic.ua/en/signup/hmrmykhz"><img alt="Powered by NIC.UA" src="https://nic.ua/assets/i/referral/btn-white-eng.png?version=v339"></a>
+            </div>
+            <div class="footer-text">
+                <p> 2024 Bumer_32/lumivoid | <a href="https://github.com/Bumer-32/lumivoid/blob/main/LICENSE">License</a> | <a href="https://github.com/Bumer-32/lumivoid/">Project Github</a></p>
+                <p>Servers are not public. You cannot access their code! sorry ¯\_(ツ)_/¯</p>
+            </div>
+            <p id="login-info">Username: not logined</p>
         </div>
-        <p id="login-info">Username: not logined</p>
-    </div>
 
 
-    <div class="login-inputs">
-        <label>Register</label>
-        <input type="text" name="Username" required minlength="1" maxlength="319" placeholder="username">
-        <input type="email" name="Email" required minlength="1" maxlength="319" placeholder="exhample@lumivoid.pp.ua">
-        <input type="password" name="Password" required minlength="1" maxlength="319" placeholder="password">
-        <span id="register-button">
-                <input type="button" name="Register" value="Register">
-        </span>
-        <a href="login.html" id="login-suggest">Already have account? Login here.</a>
+        <div class="inputs">
+            <label>Register</label>
+            <input type="text" name="Username" required minlength="1" maxlength="319" placeholder="username">
+            <input type="email" name="Email" required minlength="1" maxlength="319" placeholder="exhample@lumivoid.pp.ua">
+            <input type="password" name="Password" required minlength="1" maxlength="319" placeholder="password">
+            <span id="register-button">
+                    <input type="button" name="Register" value="Register">
+            </span>
+            <a href="login.html" id="login-suggest">Already have account? Login here.</a>
+        </div>
     </div>
-</div>
-<script type="text/javascript" src="files/register/script.js"></script>
+
+    <script type="text/javascript" src="files/base.js"></script>
+    <script type="text/javascript" src="files/register/script.js"></script>
 </body>
 </html>

@@ -17,11 +17,11 @@
     border: none;
     border-radius: 2px;
 }
-#register-button {
+#go-button {
     position: relative;
 }
-#register-button::before,
-#register-button::after {
+#go-button::before,
+#go-button::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -30,22 +30,17 @@
     width: 0;
     transition: width 0.3s ease;
 }
-#register-button::before {
+#go-button::before {
     left: 0px;
 }
-#register-button::after {
+#go-button::after {
     right: 0px;
 }
-#register-button:hover::before,
-#register-button:hover::after {
+#go-button:hover::before,
+#go-button:hover::after {
     width: 150px;
 }
-#register-button:active {
+#go-button:active {
     transform: scale(0.95);
     transition: transform 0.1s;
-}
-#login-suggest {
-    color: #007bff;
-    font-size: 10px;
-    text-decoration: none;
 }
