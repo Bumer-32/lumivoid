@@ -1,17 +1,40 @@
+import { showToast } from "./toast.js";
+
 const dsName = "bumer32"
 
-function showToast(message) {
-    const toast = document.createElement('div')
-    toast.classList.add('toast')
-    toast.textContent = message
-    document.body.appendChild(toast)
+document.getElementById("discord-button-input").addEventListener("click", function(event) {
+    event.preventDefault();
 
-    setTimeout(() => {
-        document.body.removeChild(toast)
-    }, 3000)
+    navigator.clipboard.writeText(dsName);
+    showToast("Copied to clipboard");
+})
+
+const login_info = document.getElementById("login-info")
+
+function getAllCookies() {
+    const cookiesString = document.cookie;
+    const cookiesArray = cookiesString.split("; ");
+    const cookies = {};
+    
+    cookiesArray.forEach(cookie => {
+        const [key, value] = cookie.split("=");
+        cookies[key] = decodeURIComponent(value);
+    });
+    
+    return cookies;
 }
 
-function ds() {
-    navigator.clipboard.writeText(dsName)
-    showToast("Copied to clipboard")
+const cookies = getAllCookies()
+
+if (cookies["username"]) {
+    login_info.innerText = `Username: ${cookies["username"]}`
 }
+
+login_info.addEventListener("click", function(event) {
+    const cookies = document.cookie.split("; ");
+    cookies.forEach(cookie => {
+        const [name, _] = cookie.split("=");
+        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
+    });
+    location.reload()
+})

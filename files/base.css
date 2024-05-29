@@ -186,10 +186,15 @@ body {
     color: #007bff;
     text-decoration: none;
 }
-#login-info {
-    color: #575757;
+.login-info {
+    display: flex;
+    align-items: center;
     position: absolute;
     right: 10px;
+    height: 100%;
+}
+#login-info {
+    color: #575757;
 }
 #nic-ua {
     bottom: 10px;
@@ -258,15 +263,32 @@ body {
     bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: #090909;
-    color: #ffffff;
-    padding: 15px 20px;
+    background-color: #333333;
+    color: azure;
+    padding: 5px 10px;
     border-radius: 5px;
     z-index: 1000;
     opacity: 0;
     transition: opacity 0.3s, transform 0.3s;
     animation: slideUp 3s;
 }
+
+.error-toast {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FF0000;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    animation: slideUp 3s;
+}
+
+
 @keyframes slideUp {
     0% {
         opacity: 0;
