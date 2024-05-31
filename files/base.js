@@ -1,5 +1,7 @@
 import { showToast } from "./toast.js";
 
+export const devMode = false
+
 const dsName = "bumer32"
 
 document.getElementById("discord-button-input").addEventListener("click", function(event) {

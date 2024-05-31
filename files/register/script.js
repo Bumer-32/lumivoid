@@ -1,6 +1,10 @@
 import { showToast, showErrorToast } from "../toast.js";
+import { devMode } from "../base.js";
 
-const url = "https://api.lumivoid.pp.ua/registerUser";
+let url = "https://api.lumivoid.pp.ua/registerUser";
+if (devMode) {
+    url = "http://localhost:8080/registerUser"
+}
 
 const loader = document.getElementById("loader");
 

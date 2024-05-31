@@ -1,6 +1,10 @@
 import { showToast, showErrorToast } from "../toast.js";
+import { devMode } from "../base.js";
 
-const url = "https://api.lumivoid.pp.ua/login";
+let url = "https://api.lumivoid.pp.ua/login";
+if (devMode) {
+    url = "http://localhost:8080/login"
+}
 
 const loader = document.getElementById("loader");
 
@@ -58,8 +62,8 @@ document.getElementById("login-button-input").addEventListener("click", function
             document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/";
         });
     
-        document.cookie = `username = ${data.username}`
-        document.cookie = `password = ${data.password}`
+        document.cookie = `username = ${data.username};max-age=604800`
+        document.cookie = `password = ${data.password};max-age=604800`
 
         await sleep(2500)
 

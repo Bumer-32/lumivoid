@@ -1,4 +1,5 @@
 import { showErrorToast, showToast } from "../toast.js";
+import { devMode } from "../base.js";
 
 const eyeLeft = document.getElementById("eyeLeft");
 const eyeRight = document.getElementById("eyeRight");
@@ -37,7 +38,10 @@ function sleep(ms) {
 
 //check for confirm
 const params = new URLSearchParams(document.location.search)
-const url = "https://api.lumivoid.pp.ua/confirm";
+let url = "https://api.lumivoid.pp.ua/confirm";
+if (devMode) {
+    url = "http://localhost:8080/confirm"
+}
 
 if (params.size != 0) {
     console.log("params finded");
